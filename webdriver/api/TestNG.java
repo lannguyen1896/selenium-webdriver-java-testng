@@ -1,3 +1,4 @@
+package api;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.WebDriver;
