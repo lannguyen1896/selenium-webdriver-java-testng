@@ -24,6 +24,11 @@ public class TestNG {
   public void TC_01_Login_With_Invalid_Email() {
 	  
   }
+  
+  @Test
+  public void TC_01_Login_With_Incorect_Email() {
+	  
+  }
 
   @AfterClass
   public void afterClass() {
