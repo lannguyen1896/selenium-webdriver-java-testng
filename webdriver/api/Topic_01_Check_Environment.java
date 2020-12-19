@@ -5,13 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 
-public class TestNG {
+public class Topic_01_Check_Environment {
   WebDriver driver;
   
   @BeforeClass
   public void beforeClass() {
 	  //mo trinh duyet
 	  driver = new FirefoxDriver();
+	  //mo web
 	  driver.get("https://google.com/");
   }
   
