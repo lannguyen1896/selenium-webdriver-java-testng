@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="api.Topic_01_Check_Environment">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- api.Topic_01_Check_Environment -->
+      <class name="api.Topic_02_Xpath_Css_HTML">
+        <methods>
+          <include name="afterClass"/>
+          <include name="TC_01_ValidateCurrentUrl"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- api.Topic_02_Xpath_Css_HTML -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
