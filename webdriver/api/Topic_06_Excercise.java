@@ -54,11 +54,11 @@ public class Topic_06_Excercise {
 		editemail = generateEmail();
 		editname = "Jessica Trump";
 		editdob = "1958-10-12";
-		editaddr ="912 Village  ABC Center" ;
+		editaddr ="912 Village ABC Center" ;
 		editcity = "Tokyo";
 		editstate = "Missouri New Legend";
 		editpinno = "234733";
-		editphone = "315666567";
+		editphone = "3156663567";
 
 	}
 
@@ -109,12 +109,8 @@ public class Topic_06_Excercise {
 		Assert.assertEquals(driver.findElement(By.xpath("//td[text()='Pin']/following-sibling::td")).getText(), pinno);
 		Assert.assertEquals(driver.findElement(By.xpath("//td[text()='Mobile No.']/following-sibling::td")).getText(), phone);
 		Assert.assertEquals(driver.findElement(By.xpath("//td[text()='Email']/following-sibling::td")).getText(), email);
-		customerId = driver.findElement(By.xpath("//td[text()='Customer Name']/following-sibling::td")).getText();
+		customerId = driver.findElement(By.xpath("//td[text()='Customer ID']/following-sibling::td")).getText();
 		
-	}
-	public String generateEmail() {
-		Random rand = new Random();
-		return "donald" + rand.nextInt(9999) + "@github.io";
 	}
 	
 	@Test
@@ -145,7 +141,7 @@ public class Topic_06_Excercise {
 		driver.findElement(phoneBy).clear();
 		driver.findElement(By.name("telephoneno")).sendKeys(editphone);
 		driver.findElement(emailBy).clear();
-		driver.findElement(By.name("emailid")).sendKeys(email);
+		driver.findElement(By.name("emailid")).sendKeys(editemail);
 		driver.findElement(By.name("sub")).click();
 		
         Assert.assertEquals(driver.findElement(By.className("heading3")).getText(), "Customer details updated Successfully!!!");
@@ -160,7 +156,10 @@ public class Topic_06_Excercise {
 		Assert.assertEquals(driver.findElement(By.xpath("//td[text()='Mobile No.']/following-sibling::td")).getText(), editphone);
 		Assert.assertEquals(driver.findElement(By.xpath("//td[text()='Email']/following-sibling::td")).getText(), editemail);
 	}
-	
+	public String generateEmail() {
+		Random rand = new Random();
+		return "donald" + rand.nextInt(9999) + "@github.io";
+	}
 
 	@AfterClass
 	public void afterClass() {
