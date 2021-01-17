@@ -104,6 +104,7 @@ driver.get("https://jqueryui.com/resources/demos/selectable/display-grid.html");
 		List<WebElement> allNumberSelected = driver.findElements(By.xpath("//ol[@id='selectable']/li[contains(@class,'ui-selected')]"));
 		System.out.println("Number selected: "+ allNumberSelected.size());
 	}
+	
 
 	@AfterClass
 	public void afterClass() {
